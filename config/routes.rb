@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get '/the-contact' => 'contacts#my_contact'
-  get '/all-contacts' => 'contacts#all_contacts'
+  namespace :v1 do
+    # shows ALL the contacts
+    get '/contacts' => 'contacts#index'
+  end
 end
