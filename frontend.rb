@@ -1,11 +1,22 @@
 require 'unirest'
 
 # p 'what do you want to do?'
+# p 'press 1 to look at the index'
+# p 'press 2 to look at the show'
 # user_input = gets.chomp
 
 
+# if user_input == '1'
+#   response = Unirest.get("http://localhost:3000/v1/contacts")
+#   puts JSON.pretty_generate(response.body)
+#   #
+# elsif user_input == '2'
+#   p "enter the id of the contact you want to see"
+#   other_user_input = gets.chomp
+#   response = Unirest.get("http://localhost:3000/v1/contacts/#{other_user_input}")
+#   puts JSON.pretty_generate(response.body)
+# end
 # one contact
-# response = Unirest.get("http://localhost:3000/the-contact")
 
 # contact = response.body
 # p 'here is the contact:'
