@@ -26,8 +26,18 @@ require 'unirest'
 #   p "-" * 30
 # end
 
-# make a post request
-response = Unirest.post("localhost:3000/v1/contacts", parameters: {
+# create
+# response = Unirest.post("localhost:3000/v1/contacts", parameters: {
+#   the_first_name: "Joe",
+#   the_last_name: "Trask",
+#   the_email: "joe@joe.com",
+#   the_phone_number: "346789"
+# })
+
+# puts JSON.pretty_generate(response.body)
+
+# update
+response = Unirest.patch("localhost:3000/v1/contacts/1", parameters: {
   the_first_name: "Joe",
   the_last_name: "Trask",
   the_email: "joe@joe.com",

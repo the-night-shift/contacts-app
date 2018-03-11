@@ -26,4 +26,18 @@ class V1::ContactsController < ApplicationController
     render json: contact1.as_json
   end
 
+  def update
+    # get the contact
+    the_id = params[:id]
+    contact1 = Contact.find_by(id: the_id)
+    # update the contact
+    contact1.first_name = params[:the_first_name]
+    contact1.last_name = params[:the_last_name]
+    contact1.email = params[:the_email]
+    contact1.phone_number = params[:the_phone_number]
+    contact1.save
+    # show the user the updated contact
+    render json: contact1.as_json
+  end
+
 end
