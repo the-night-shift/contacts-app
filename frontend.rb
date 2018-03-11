@@ -1,5 +1,9 @@
 require 'unirest'
 
+# p 'what do you want to do?'
+# user_input = gets.chomp
+
+
 # one contact
 # response = Unirest.get("http://localhost:3000/the-contact")
 
@@ -37,11 +41,17 @@ require 'unirest'
 # puts JSON.pretty_generate(response.body)
 
 # update
-response = Unirest.patch("localhost:3000/v1/contacts/1", parameters: {
-  the_first_name: "Joe",
-  the_last_name: "Trask",
-  the_email: "joe@joe.com",
-  the_phone_number: "346789"
-})
+# response = Unirest.patch("localhost:3000/v1/contacts/1", parameters: {
+#   the_first_name: "Joe",
+#   the_last_name: "Trask",
+#   the_email: "joe@joe.com",
+#   the_phone_number: "346789"
+# })
 
-puts JSON.pretty_generate(response.body)
+# puts JSON.pretty_generate(response.body)
+
+# destroy
+# response = Unirest.delete("localhost:3000/v1/contacts/110")
+# puts JSON.pretty_generate(response.body)
+
+
